@@ -34,10 +34,14 @@
 					<?php if ( cs_get_option( 'so_section_about_button_one_enable' ) || cs_get_option( 'so_section_about_button_two_enable' ) ): ?>
                         <ul class="link-list">
 							<?php if ( cs_get_option( 'so_section_about_button_one_enable' ) ): ?>
-                                <li><a href="<?php echo cs_get_option('so_section_about_button_one_url')?>" class="btn-boch"><?php echo cs_get_option('so_section_about_button_one_text')?></a></li>
+                                <li><a href="<?php echo cs_get_option( 'so_section_about_button_one_url' ) ?>"
+                                       class="btn-boch"><?php echo cs_get_option( 'so_section_about_button_one_text' ) ?></a>
+                                </li>
 							<?php endif; ?>
 							<?php if ( cs_get_option( 'so_section_about_button_two_enable' ) ): ?>
-                                <li><a href="<?php echo cs_get_option('so_section_about_button_two_url')?>" class="btn-boch btn-colored"><?php echo cs_get_option('so_section_about_button_two_text')?></a></li>
+                                <li><a href="<?php echo cs_get_option( 'so_section_about_button_two_url' ) ?>"
+                                       class="btn-boch btn-colored"><?php echo cs_get_option( 'so_section_about_button_two_text' ) ?></a>
+                                </li>
 							<?php endif; ?>
                         </ul>
 					<?php endif; ?>

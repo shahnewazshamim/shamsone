@@ -752,7 +752,49 @@ p{
 }
 
 /*==================
-=  4.Why Me Section =
+=  4.Stat Overview =
+==================== */
+.overview{
+    position: relative;
+}
+.overview-content{}
+.overview-content{}
+.overview-content .single-item{
+    margin-bottom: 35px;
+    text-align: center;
+}
+.overview-content .single-item .content{
+	overflow:hidden;
+}
+.overview-content .single-item h2{
+    margin-top:5px;
+    font-size: 48px;
+}
+.overview-content .single-item p{
+    margin-top:5px;
+    font-size: 20px;
+    font-weight: 900;
+}
+.overview-content .single-item i{
+	color:#fff;
+	font-size:45px;
+	margin-top:5px;
+	width:60px;
+}
+.overview .single-item p{
+	margin-bottom:0;
+}
+.overview .overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    top: 0;
+    left: 0;
+}
+
+/*==================
+=  4.Why me Section =
 ==================== */
 .why-me{
 
@@ -863,7 +905,7 @@ p{
 	font-size:48px;
 	color:#fff;
 	line-height:80px;
-	text-shadow: 225px 45px 1px rgba(0,0,0,.3);
+	text-shadow: 288px 120px 1px rgba(0, 0, 0, 0.09);
 }
 .service-content .single-service h4{
 	font-weight: 400;

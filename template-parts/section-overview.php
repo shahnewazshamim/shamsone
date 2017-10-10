@@ -9,17 +9,19 @@
 ?>
 
 <?php if ( ! empty( cs_get_option( 'so_section_overview_stat' ) ) ): ?>
-<section class="section section-padding why-me solid-bg">
-	<div class="container">
-		<div class="row why-me-content">
+<section class="section section-padding overview image-bg" style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . 'main-bg.jpg' ?>');">
+    <!--Image Overlay-->
+    <div class="overlay"></div>
+    <div class="container">
+		<div class="row overview-content">
 			<?php $statistics = cs_get_option( 'so_section_overview_stat' ) ?>
 			<?php if ( is_array( $statistics ) ) : ?>
 				<?php foreach ( $statistics as $key => $value ) : ?>
                     <div class="col-md-3 col-sm-6 single-item ">
                         <i class="fa <?php echo $value[ 'so_section_overview_stat_icon' ] ?>"></i>
                         <div class="content">
-                            <h2><?php echo $value[ 'so_section_overview_stat_value' ] . ' ' . $value[ 'so_section_overview_stat_title' ] ?></h2>
-                            <!--<p><?php /*echo $value[ 'so_section_overview_stat_title' ] */?></p>-->
+                            <h2><?php echo $value[ 'so_section_overview_stat_value' ] ?></h2>
+                            <p><?php echo $value[ 'so_section_overview_stat_title' ] ?></p>
                         </div>
                     </div>
 				<?php endforeach; ?>

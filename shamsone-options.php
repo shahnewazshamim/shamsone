@@ -349,6 +349,43 @@ function shamsone_options( $options ) {
 						'desc'    => 'By Default active',
 						'default' => 1,
 					),
+					array(
+						'id'    => 'so_section_service_title',
+						'type'  => 'text',
+						'title' => 'Title',
+						'desc'  => 'Ex: Lorem ipsum dolor',
+					),
+					array(
+						'id'    => 'so_section_service_subtitle',
+						'type'  => 'textarea',
+						'title' => 'Subtitle',
+						'desc'  => 'Ex: Lorem ipsum dolor sit amet, consectetuer adipiscing elit',
+					),
+					array(
+						'id'              => 'so_section_service_list',
+						'type'            => 'group',
+						'title'           => 'Service Details',
+						'desc'            => 'Add service to show on service section',
+						'button_title'    => 'New Service',
+						'accordion_title' => 'Service',
+						'fields'          => array(
+							array(
+								'id'    => 'so_section_service_list_title',
+								'type'  => 'text',
+								'title' => 'My Offer',
+							),
+							array(
+								'id'    => 'so_section_service_list_icon',
+								'type'  => 'icon',
+								'title' => 'Font Awesome Icon',
+							),
+							array(
+								'id'    => 'so_section_service_list_description',
+								'type'  => 'textarea',
+								'title' => 'Description',
+							),
+						)
+					),
 				),
 			),
 			array(

@@ -26,7 +26,10 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right" id="nav">
-						<li class="current"><a href="#home">HOME</a></li>
+
+
+
+                        <li class="current"><a href="#home">HOME</a></li>
 						<li><a href="#about">ABOUT</a></li>
 						<li><a href="#resume">RESUME</a></li>
 						<li><a href="#services">SERVICES</a></li>
