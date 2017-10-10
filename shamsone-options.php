@@ -414,6 +414,18 @@ function shamsone_options( $options ) {
 						'desc'    => 'By Default active',
 						'default' => 1,
 					),
+					array(
+						'id'    => 'so_section_portfolio_title',
+						'type'  => 'text',
+						'title' => 'Title',
+						'desc'  => 'Ex: Lorem ipsum dolor',
+					),
+					array(
+						'id'    => 'so_section_portfolio_subtitle',
+						'type'  => 'textarea',
+						'title' => 'Subtitle',
+						'desc'  => 'Ex: Lorem ipsum dolor sit amet, consectetuer adipiscing elit',
+					),
 				),
 			),
 			array(

@@ -2,19 +2,22 @@
 /**
  * The template part for displaying section portfolio.
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @since      Twenty Sixteen 1.0
  */
+
 ?>
 
 <?php
-$args      = array(
+
+$args = array(
 	'post_type'      => 'so-portfolio',
 	'order'          => 'ASC',
 	'orderby'        => 'post_title',
 	'posts_per_page' => 6,
 );
+
 $the_query = new WP_Query( $args );
 ?>
 
@@ -22,12 +25,12 @@ $the_query = new WP_Query( $args );
     <div class="container">
         <!--Page Header-->
         <div class="row section-header">
-            <h2>
-                Portfolio
-            </h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-            </p>
+	        <?php if ( cs_get_option( 'so_section_portfolio_title' ) ): ?>
+                <h2><?php echo cs_get_option( 'so_section_portfolio_title' ) ?></h2>
+	        <?php endif; ?>
+	        <?php if ( cs_get_option( 'so_section_portfolio_subtitle' ) ): ?>
+                <p><?php echo cs_get_option( 'so_section_portfolio_subtitle' ) ?></p>
+	        <?php endif; ?>
         </div>
         <div class="row project-content text-center">
             <ul class="filter-list">
@@ -40,16 +43,15 @@ $the_query = new WP_Query( $args );
             <div class="porject-container">
 				<?php if ( have_posts() ): while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					<?php //$post_meta = get_post_meta( $post->ID, '_so_portfolio_post_options', true ); ?>
+					<?php $terms = wp_get_post_terms( get_the_ID(), 'so-portfolio-type' ); ?>
                     <!--Single Project Item-->
                     <div class="webdesign project-item grid">
-                        <a class="image-popup-link" href="<?php the_post_thumbnail_url(); ?> "><!--PopUp Image Link-->
+                        <a class="" href="<?php the_permalink(); ?> "><!--PopUp Image Link-->
                             <figure class="effect-sadie">
-	                            <?php ( has_post_thumbnail() ) ? the_post_thumbnail( 'portfolio-thumb' ) : ''; ?>
-
-                                <!--<img src="assets/img/projects/1.jpg" alt="img02">-->
+								<?php ( has_post_thumbnail() ) ? the_post_thumbnail(  ) : ''; ?>
                                 <figcaption>
                                     <h2><?php the_title() ?></h2>
-                                    <p><?php the_content() ?></p>
+                                    <p><small><?php foreach ( $terms as $term ) { echo ucwords($term->name) . ' '; } ?></small></p>
                                 </figcaption>
                             </figure>
                         </a>
