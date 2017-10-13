@@ -422,8 +422,8 @@ p{
 	width:100%;
 	height:100%;
 	position:fixed;
-	left:0; 
-	top:0; 
+	left:0;
+	top:0;
 	z-index: 9995;
 }
 /*Navgaion Bar css*/
@@ -658,11 +658,11 @@ p{
 	margin-right:0px;
 }
 .about-content .basic-info .social-nav li a{
-	color:#fff;	
+	color:#fff;
 }
 
 .about-content .personal-info{
-	
+
 }
 .about-content .personal-info ul{
 	list-style:none;
@@ -699,7 +699,7 @@ p{
 .about-content .basic-info .link-list li a{
 }
 .about-content .skills-info{
-	
+
 }
 .about-content .skills-info .title{
 	margin-bottom: 10px;
@@ -791,6 +791,34 @@ p{
     background: rgba(0,0,0,.8);
     top: 0;
     left: 0;
+}
+
+/*==================
+=  4.Portfolio Details Section =
+==================== */
+.portfolio-detail{}
+.portfolio-detail > .row{
+    padding-top:60px;
+}
+.portfolio-detail > .row h3{
+    color: #625e62;
+}
+.portfolio-detail > .row h3,
+.portfolio-detail > .row h4,
+.portfolio-detail > .row h5,
+.portfolio-detail > .row h6{
+    padding-bottom: 10px;
+}
+.portfolio-detail ul li i{
+    padding-right: 10px;
+}
+.portfolio-detail a{
+    margin: 10px 10px 10px 0;
+}
+.portfolio-detail .btn-boch.btn-colored:hover{
+    border: 2px solid;
+    background: transparent;
+    color:#00AA6E;
 }
 
 /*==================
@@ -1093,10 +1121,10 @@ p{
 	height:auto;
 	opacity: 1;
 	transition: .3s ease-in-out;
-	
+
 }
 .hover08 figure img {
-	
+
 }
 .grid figure:hover img {
 ;
@@ -1173,7 +1201,7 @@ figure.effect-sadie:hover p {
 	transform: translate3d(0,0,0);
 }
 figure.effect-sadie:hover figcaption::before{
-	
+
 	opacity:1;
 }
 
@@ -1333,7 +1361,7 @@ figure.effect-sadie:hover figcaption::before{
 
 .contact-form .ct-form .form-group .form-control:focus, .contact-form .ct-form .form-group .form-control:active {
     padding-left: 60px;
-   
+
 }
 .contact-form .ct-form .form-group textarea {
     background:transparent!important;
@@ -1401,7 +1429,7 @@ figure.effect-sadie:hover figcaption::before{
 }
 
 .contact-detail{
-	
+
 }
 .contact-detail-item{
 

@@ -68,4 +68,9 @@ a,a:hover,a:focus{
 .single-contact-detail .header i{
 	color:#00AA6E;
 }
-
+.text-main {
+	color: #00AA6E;
+}
+.text-white {
+	color: #fff;
+}

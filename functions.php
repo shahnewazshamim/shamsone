@@ -99,7 +99,7 @@ if ( ! function_exists( 'so_portfolio_post_type' ) ) {
 			'has_archive' => TRUE,
 			'rewrite'     => array( 'slug' => 'so-portfolio' ),
 			'menu_icon'   => 'dashicons-portfolio',
-			'supports'    => array( 'title', 'thumbnail' ),
+			'supports'    => array( 'title', 'editor', 'thumbnail' ),
 		) );
 	}
 	
