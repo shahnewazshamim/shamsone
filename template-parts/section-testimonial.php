@@ -8,7 +8,7 @@
  */
 ?>
 
-<section class="section section-padding image-bg testimonial" style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . "testimonial-bg.jpg" ?>');">
+<section id="testimonial" class="section section-padding image-bg testimonial" style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . "testimonial-bg.jpg" ?>');">
 	<!--Image Overlay-->
 	<div class="overlay"></div>
 	<div class="container">

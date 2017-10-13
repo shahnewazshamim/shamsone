@@ -57,6 +57,26 @@ if ( ! function_exists( 'so_assets' ) ) {
 }
 
 /***********************************************************************************************************************
+ * Register Navigation on Theme
+ **********************************************************************************************************************/
+if (!function_exists('register_so_menu')) {
+	function register_so_menu()
+	{
+		register_nav_menu('primary-menu', __('Primary Menu'));
+	}
+	add_action('init', 'register_so_menu');
+}
+
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+
+function special_nav_class ($classes, $item) {
+	if (in_array('current-menu-item', $classes) ){
+		$classes[] = 'current ';
+	}
+	return $classes;
+}
+
+/***********************************************************************************************************************
  * Create a default Landing Page / Home Page for Shams One
  **********************************************************************************************************************/
 if ( get_page_by_title( 'Airport' ) == NULL ) {

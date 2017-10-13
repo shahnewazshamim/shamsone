@@ -9,7 +9,7 @@
 ?>
 
 <?php if ( ! empty( cs_get_option( 'so_section_overview_stat' ) ) ): ?>
-<section class="section section-padding overview image-bg" style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . 'main-bg.jpg' ?>');">
+<section id="overview" class="section section-padding overview image-bg" style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . 'main-bg.jpg' ?>');">
     <!--Image Overlay-->
     <div class="overlay"></div>
     <div class="container">

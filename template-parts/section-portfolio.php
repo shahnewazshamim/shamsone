@@ -23,7 +23,7 @@ $taxonomy  = 'so-portfolio-type';
 $terms     = get_terms( $taxonomy );
 ?>
 
-<section id="projects" class="section section-padding projects">
+<section id="portfolio" class="section section-padding projects">
     <div class="container">
         <!--Page Header-->
         <div class="row section-header">
