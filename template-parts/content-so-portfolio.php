@@ -43,7 +43,7 @@
 		                <?php endforeach; ?>
                     </ul>
                     <br>
-                    <h5 class="text-main">Tools and IDE</h5>
+                    <h4 class="text-main">Tools and IDE</h4>
                     <ul>
 		                <?php foreach ( $post_meta['so_portfolio_key_tool'] as $key => $value ) : ?>
                             <li><p><i class="fa fa-wrench text-main"></i> <?php echo $value['so_portfolio_key_tool_title'] ?></p></li>
@@ -51,9 +51,11 @@
                     </ul>
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12">
-                    <p><?php the_content() ?></p><br>
-                    <h5 class="text-main">Project Duration - <span><?php echo $post_meta['so_portfolio_overview_duration']?></span></h5>
-                    <h5 class="text-main">Team Members - <span><?php echo $post_meta['so_portfolio_overview_team']?></span></h5><br>
+                    <p><?php the_content() ?></p>
+                    <div class="blockquote">
+                        <p class="text-main">Project Duration - <?php echo $post_meta['so_portfolio_overview_duration']?></p>
+                        <p class="text-main">Team Members - <?php echo $post_meta['so_portfolio_overview_team']?></p>
+                    </div>
                     <ul>
 		                <?php foreach ( $post_meta['so_portfolio_overview_functionality'] as $key => $value ) : ?>
                             <li><p><i class="fa fa-check text-main"></i> <?php echo $value['so_portfolio_overview_functionality_title'] ?></p></li>
