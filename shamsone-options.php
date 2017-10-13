@@ -8,12 +8,13 @@
  */
 
 function shamsone_options( $options ) {
+	
 	$options = array();
-
+	
 	/*******************************************************************************************************************
 	 * Profile Sections
 	 ******************************************************************************************************************/
-	$options['profile'] = array(
+	$options[ 'profile' ] = array(
 		'name'   => 'so_profile',
 		'title'  => 'Profile',
 		'icon'   => 'fa fa-user',
@@ -62,17 +63,39 @@ function shamsone_options( $options ) {
 			),
 		),
 	);
-
+	
 	/*******************************************************************************************************************
 	 * Header Sections
 	 ******************************************************************************************************************/
-	$options['header'] = array(
+	$options[ 'header' ] = array(
 		'name'   => 'so_header',
 		'title'  => 'Header',
 		'icon'   => 'fa fa-header',
-		'fields' => array(),
+		'fields' => array(
+			array(
+				'id'    => 'so_header_logo_text_enable',
+				'type'  => 'switcher',
+				'title' => 'Enable Text Logo',
+				'desc'  => 'By Default Image Logo is active',
+				'help'  => 'If enable Image logo will disappear and Text Logo will be active',
+			),
+			array(
+				'id'         => 'so_header_logo_text',
+				'type'       => 'text',
+				'title'      => 'Text Logo',
+				'default'    => get_bloginfo( 'name' ),
+				'dependency' => array( 'so_header_logo_text_enable', '==', 'true' ),
+			),
+			array(
+				'id'         => 'so_header_logo_image',
+				'type'       => 'upload',
+				'title'      => 'Image Logo',
+				'default'    => get_template_directory_uri() . '/img/md_shamim_shahnewaz.png',
+				'dependency' => array( 'so_header_logo_text_enable', '==', 'false' ),
+			),
+		),
 	);
-
+	
 	/*******************************************************************************************************************
 	 * Single Page Sections
 	 ******************************************************************************************************************/
@@ -113,7 +136,7 @@ function shamsone_options( $options ) {
 						'desc'       => 'Ex: Upload an image for background',
 						'dependency' => array( 'so_section_home_video_enable', '==', 'false' ),
 					),
-
+					
 					array(
 						'id'    => 'so_section_home_intro_line_one',
 						'type'  => 'text',
@@ -218,7 +241,7 @@ function shamsone_options( $options ) {
 								'type'  => 'text',
 								'title' => 'Level',
 							),
-						)
+						),
 					),
 				),
 			),
@@ -257,7 +280,7 @@ function shamsone_options( $options ) {
 								'type'  => 'textarea',
 								'title' => 'Short Description',
 							),
-						)
+						),
 					),
 				),
 			),
@@ -308,7 +331,7 @@ function shamsone_options( $options ) {
 								'type'  => 'text',
 								'title' => 'Short Description',
 							),
-						)
+						),
 					),
 					array(
 						'id'              => 'so_section_resume_job',
@@ -333,7 +356,7 @@ function shamsone_options( $options ) {
 								'type'  => 'text',
 								'title' => 'Description',
 							),
-						)
+						),
 					),
 				),
 			),
@@ -384,7 +407,7 @@ function shamsone_options( $options ) {
 								'type'  => 'textarea',
 								'title' => 'Description',
 							),
-						)
+						),
 					),
 				),
 			),
@@ -463,7 +486,7 @@ function shamsone_options( $options ) {
 								'type'  => 'text',
 								'title' => 'Statistics Value',
 							),
-						)
+						),
 					),
 				),
 			),
@@ -517,11 +540,11 @@ function shamsone_options( $options ) {
 			),
 		),
 	);
-
+	
 	/*******************************************************************************************************************
 	 * Footer Sections
 	 ******************************************************************************************************************/
-	$options['footer'] = array(
+	$options[ 'footer' ] = array(
 		'name'   => 'so_footer',
 		'title'  => 'Footer',
 		'icon'   => 'fa fa-copyright',
@@ -540,11 +563,11 @@ function shamsone_options( $options ) {
 			),
 		),
 	);
-
+	
 	/*******************************************************************************************************************
 	 * Social Options
 	 ******************************************************************************************************************/
-	$options['social'] = array(
+	$options[ 'social' ] = array(
 		'name'   => 'so_social',
 		'title'  => 'Social Network',
 		'icon'   => 'fa fa-share',
@@ -635,8 +658,7 @@ function shamsone_options( $options ) {
 			),
 		),
 	);
-
-
+	
 	return $options;
 }
 

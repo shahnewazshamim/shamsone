@@ -11,7 +11,11 @@
 <section class="section section-padding solid-bg footer">
     <div class="container">
         <div class="row footer-content text-center">
-            <img src="<?php echo DIR_SHAMS_ONE_IMG . 'logo.png' ?>" alt="">
+	        <?php if ( cs_get_option( 'so_header_logo_text_enable' ) ) : ?>
+                <h1><?php echo cs_get_option( 'so_header_logo_text' ) ?></h1>
+	        <?php else: ?>
+                <img src="<?php echo cs_get_option( 'so_header_logo_image' ) ?>" alt=""/>
+	        <?php endif; ?>
             <ul class="social-nav">
 	            <?php
 	            if(cs_get_option('so_enable_social')) {
@@ -37,7 +41,6 @@
                     <p class="copy-text"><?php echo cs_get_option('so_copyright') ?></p>
                 </div>
 	        <?php endif; ?>
-
         </div>
     </div>
 </section>

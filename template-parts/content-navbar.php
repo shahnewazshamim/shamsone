@@ -23,7 +23,11 @@
                     </button>
                     <!-- Your Logo Here-->
                     <a href="#" class="navbar-brand">
-                        <img src="<?php echo DIR_SHAMS_ONE_IMG . 'logo.png' ?>" alt=""/>
+						<?php if ( cs_get_option( 'so_header_logo_text_enable' ) ) : ?>
+                            <h1><?php echo cs_get_option( 'so_header_logo_text' ) ?></h1>
+						<?php else: ?>
+                            <img src="<?php echo cs_get_option( 'so_header_logo_image' ) ?>" alt=""/>
+						<?php endif; ?>
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

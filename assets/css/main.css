@@ -456,6 +456,20 @@ p{
 .nav-bar-area .navbar-brand img{
 	padding-top: 18px;
 }
+.nav-bar-area .navbar-brand h1{
+    color: #fff;
+    font-size: 22px;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    padding-top: 10px;
+}
+.footer-content h1{
+    color: #fff;
+    font-size: 22px;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
 .nav-bar-area.fixed-top .navbar-brand h1 .white-highlight{
 	color:#282528;
 }
