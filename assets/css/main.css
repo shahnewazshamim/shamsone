@@ -454,7 +454,7 @@ p{
 	height:60px;
 }
 .nav-bar-area .navbar-brand img{
-	padding-top: 18px;
+	padding-top: 0;
 }
 .nav-bar-area .navbar-brand h1{
     color: #fff;

@@ -149,6 +149,21 @@ function shamsone_options( $options ) {
 						'title' => 'Intro Text Line #02',
 						'desc'  => 'By default your first and last name',
 					),
+					array(
+						'id'              => 'so_section_home_expertise',
+						'type'            => 'group',
+						'title'           => 'Expertness',
+						'desc'            => 'Add expertise to show on home intro section',
+						'button_title'    => 'New Expertise',
+						'accordion_title' => 'Expertise',
+						'fields'          => array(
+							array(
+								'id'    => 'so_section_home_expertise_title',
+								'type'  => 'text',
+								'title' => 'Expertise',
+							),
+						),
+					),
 				),
 			),
 			array(

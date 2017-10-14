@@ -46,18 +46,18 @@ $terms     = get_terms( $taxonomy );
 
             <div class="porject-container">
 				<?php if ( have_posts() ): ?>
-				<?php for ( $i = 1; $i <= 20; $i++ ): ?>
 					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 						<?php
+						
 						$terms = wp_get_post_terms( get_the_ID(), 'so-portfolio-type' );
-
+						
 						$this_post_types = array();
 						foreach ( $terms as $term ) {
-							$this_post_types['name'][] = $term->name;
-							$this_post_types['slug'][] = $term->slug;
+							$this_post_types[ 'name' ][] = $term->name;
+							$this_post_types[ 'slug' ][] = $term->slug;
 						}
-						$slug = implode( ' ', $this_post_types['slug'] );
-						$name = implode( ', ', $this_post_types['name'] );
+						$slug = implode( ' ', $this_post_types[ 'slug' ] );
+						$name = implode( ', ', $this_post_types[ 'name' ] );
 						?>
                         <div class="<?php echo $slug ?> project-item grid">
                             <a class="" href="<?php the_permalink(); ?>" target="_blank"><!--PopUp Image Link-->
@@ -73,7 +73,6 @@ $terms     = get_terms( $taxonomy );
                             </a>
                         </div>
 					<?php endwhile; ?>
-				<?php endfor; ?>
 				<?php endif; ?>
             </div>
         </div>

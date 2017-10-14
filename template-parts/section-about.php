@@ -2,10 +2,11 @@
 /**
  * The template part for displaying section about.
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @since      Twenty Sixteen 1.0
  */
+
 ?>
 
 <section id="about" class="section section-padding about">
@@ -57,9 +58,10 @@
 						<?php endif; ?>
                         <ul class="social-nav">
 							<?php
+							
 							if ( cs_get_option( 'so_enable_social' ) ) {
 								foreach ( cs_get_all_option() as $key => $value ) {
-									if ( strpos( $key, 'so_social_menu_' ) !== false ) {
+									if ( strpos( $key, 'so_social_menu_' ) !== FALSE ) {
 										if ( $value == '' ) {
 											continue;
 										}
@@ -85,15 +87,16 @@
                     <div class="personal-info">
                         <ul class="info-list">
 							<?php
+							
 							foreach ( cs_get_all_option() as $key => $value ) {
-								if ( strpos( $key, 'so_profile_address_' ) !== false ) {
+								if ( strpos( $key, 'so_profile_address_' ) !== FALSE ) {
 									if ( $value == '' ) {
 										continue;
 									}
 									$address_list[ $key ] = $value;
 								}
 							}
-
+							
 							if ( ! empty( $address_list ) ) {
 								foreach ( $address_list as $icon => $value ) {
 									$icon = str_replace( '_', '-', str_replace( 'so_profile_address_', '', $icon ) );
@@ -112,13 +115,13 @@
                                 <!--Single Skill Bar-->
                                 <div class="single-bar">
                                     <div class="skill-info">
-                                        <span class="skill-title"><?php echo $value['so_section_about_skill_title'] ?></span>
-                                        <span class="skill-percent"><?php echo $value['so_section_about_skill_level'] ?>
+                                        <span class="skill-title"><?php echo $value[ 'so_section_about_skill_title' ] ?></span>
+                                        <span class="skill-percent"><?php echo $value[ 'so_section_about_skill_level' ] ?>
                                             %</span>
                                     </div>
                                     <div class="progress">
                                         <div class="progress-bar" role="progressbar"
-                                             style="width: <?php echo $value['so_section_about_skill_level'] ?>%;"></div>
+                                             style="width: <?php echo $value[ 'so_section_about_skill_level' ] ?>%;"></div>
                                     </div>
                                 </div>
 							<?php endforeach; ?>

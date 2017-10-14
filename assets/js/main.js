@@ -7,7 +7,7 @@
 */
 (function ($) {
 	'use strict';
-	
+	console.log(expertise);
 	/*++++++++++++++++++++++++
 	-----Preloader Effect-----	    
 	++++++++++++++++++++++++++*/
@@ -21,13 +21,7 @@
 	-------Typing Effect------	 		
 	++++++++++++++++++++++++++*/
 	$(".typed-effect").typed({
-		strings: 
-		[
-				'Web Designer',
-            	'UI/UX DESIGNER',
-				'Android Developer',
-				'Wordpress Developer'
-		],
+		strings: expertise,
 		typeSpeed: 50,
 		backDelay: 500,
 		loop: true

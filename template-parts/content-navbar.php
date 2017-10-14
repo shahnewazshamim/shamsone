@@ -26,7 +26,12 @@
 						<?php if ( cs_get_option( 'so_header_logo_text_enable' ) ) : ?>
                             <h1><?php echo cs_get_option( 'so_header_logo_text' ) ?></h1>
 						<?php else: ?>
-                            <img src="<?php echo cs_get_option( 'so_header_logo_image' ) ?>" alt=""/>
+							<?php if ( cs_get_option( 'so_header_logo_image' ) ) : ?>
+                                <img src="<?php echo cs_get_option( 'so_header_logo_image' ) ?>" alt=""/>
+							<?php else: ?>
+                                <img src="<?php echo DIR_SHAMS_ONE_IMG . 'md_shamim_shahnewaz.png' ?>" alt=""/>
+							<?php endif; ?>
+						
 						<?php endif; ?>
                     </a>
                 </div>

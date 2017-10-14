@@ -2,10 +2,11 @@
 /**
  * The template part for displaying section contact.
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @since      Twenty Sixteen 1.0
  */
+
 ?>
 
 <section id="contact" class="section section-padding contact">
@@ -32,7 +33,12 @@
             <div class="row contact-main-content">
                 <!--Contact Form-->
                 <div class="col-lg-6 col-lg-push-3 col-md-8 col-md-push-2 col-sm-8 col-sm-push-2 contact-form">
-					<?php echo do_shortcode( '[contact-form-7 id="21" title="Home Page Contact" html_id="contact-form-21" html_class="ct-form"]' ) ?>
+					<?php
+					
+					if ( cs_get_option( 'so_section_contact_shortcode' ) ) {
+						echo do_shortcode( cs_get_option( 'so_section_contact_shortcode' ) );
+					}
+					?>
                     <div id="form-messages"></div>
                 </div>
             </div>
@@ -43,8 +49,9 @@
         <div class="container">
             <div class="row">
 				<?php
+				
 				foreach ( cs_get_all_option() as $key => $value ) {
-					if ( strpos( $key, 'so_profile_address_' ) !== false ) {
+					if ( strpos( $key, 'so_profile_address_' ) !== FALSE ) {
 						if ( $value == '' ) {
 							continue;
 						}
@@ -52,15 +59,21 @@
 					}
 				}
 				?>
-
+				
 				<?php if ( ! empty( $address_list ) ) : ?>
+					<?php $titles = array(
+						'map'   => 'ADDRESS',
+						'phone' => 'PHONE',
+						'mail'  => 'E-MAIL',
+						'link'  => 'WEB SITE',
+					) ?>
 					<?php foreach ( $address_list as $icon => $value )  : ?>
 						<?php $icon = str_replace( '_', '-', str_replace( 'so_profile_address_', '', $icon ) ); ?>
                         <!--Single Contact Info-->
                         <div class="col-md-3 col-sm-6 single-contact-detail">
                             <div class="header">
-                                <i class="pe-7s-<?php echo $icon?>"></i>
-                                <h4>ADDRESS</h4>
+                                <i class="pe-7s-<?php echo $icon ?>"></i>
+                                <h4><?php echo $titles[ $icon ] ?></h4>
                             </div>
                             <p><?php echo $value ?></p>
                         </div>

@@ -2,10 +2,11 @@
 /**
  * The template part for displaying section resume.
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @since      Twenty Sixteen 1.0
  */
+
 ?>
 <?php if ( cs_get_option( 'so_section_resume_education' ) || cs_get_option( 'so_section_resume_job' ) ): ?>
     <section id="resume" class="section section-padding resume solid-bg">
@@ -30,9 +31,9 @@
                             <div class="single-item-resume">
                                 <i class="pe-7s-study"></i>
                                 <div class="item-detail">
-                                    <h4 class="institute"><?php echo $value['so_section_resume_education_institution'] ?></h4>
-                                    <p class="date"><?php echo $value['so_section_resume_education_degree'] ?></p>
-                                    <p class="detail"><?php echo $value['so_section_resume_education_description'] ?></p>
+                                    <h4 class="institute"><?php echo $value[ 'so_section_resume_education_institution' ] ?></h4>
+                                    <p class="date"><?php echo $value[ 'so_section_resume_education_degree' ] ?></p>
+                                    <p class="detail"><?php echo $value[ 'so_section_resume_education_description' ] ?></p>
                                 </div>
                             </div>
 						<?php endforeach; ?>
@@ -47,9 +48,9 @@
                             <div class="single-item-resume">
                                 <i class="pe-7s-portfolio"></i>
                                 <div class="item-detail">
-                                    <h4 class="institute"><?php echo $value['so_section_resume_job_title'] ?></h4>
-                                    <p class="date"><?php echo $value['so_section_resume_job_company'] ?></p>
-                                    <p class="detail"><?php echo $value['so_section_resume_job_description'] ?></p>
+                                    <h4 class="institute"><?php echo $value[ 'so_section_resume_job_title' ] ?></h4>
+                                    <p class="date"><?php echo $value[ 'so_section_resume_job_company' ] ?></p>
+                                    <p class="detail"><?php echo $value[ 'so_section_resume_job_description' ] ?></p>
                                 </div>
                             </div>
 						<?php endforeach; ?>
