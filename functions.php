@@ -105,30 +105,17 @@ if ( ! function_exists( 'so_assets' ) ) {
 	
 	function so_assets() {
 		
-		$expertise = array();
-		if ( ! in_array( 'codestar-framework-101/cs-framework.php', get_option( 'active_plugins' ) ) ) {
-			die( '<h1>COULD NOT ESTABLISHED A CONNECTION WITH REQUIRED PLUGIN.<br>TRY TO ACTIVATE PLUGIN FIRST</h1>' );
-		} else {
-			
-			if ( ! empty( cs_get_option( 'so_section_home_expertise' ) ) ) {
-				foreach ( cs_get_option( 'so_section_home_expertise' ) as $value ) {
-					$expertise[] = $value[ 'so_section_home_expertise_title' ];
-				}
-			}
-		}
 		wp_enqueue_style( 'so-style', DIR_SHAMS_ONE_STYLE . '/style.css' );
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'so-bootstrap', DIR_SHAMS_ONE_JS . 'bootstrap.min.js', array( 'jquery' ), '4.8.2', TRUE );
 		wp_enqueue_script( 'so-bootstrap', DIR_SHAMS_ONE_JS . 'bootstrap.min.js', array( 'jquery' ), '4.8.2', TRUE );
 		wp_enqueue_script( 'so-jquery-nav', DIR_SHAMS_ONE_JS . 'jquery.nav.js', array( 'jquery' ), '4.8.2', TRUE );
-		//wp_enqueue_script( 'so-jquery-particleground', DIR_SHAMS_ONE_JS . 'jquery.particleground.min.js', array( 'jquery' ), '4.8.2', TRUE );
 		wp_enqueue_script( 'so-typed', DIR_SHAMS_ONE_JS . 'typed.min.js', array( 'jquery' ), '4.8.2', TRUE );
 		wp_enqueue_script( 'so-owl-carousel', DIR_SHAMS_ONE_JS . 'owl.carousel.min.js', array( 'jquery' ), '4.8.2', TRUE );
 		wp_enqueue_script( 'so-isotope-pkgd', DIR_SHAMS_ONE_JS . 'isotope.pkgd.min.js', array( 'jquery' ), '4.8.2', TRUE );
 		wp_enqueue_script( 'so-jquery-magnific-popup', DIR_SHAMS_ONE_JS . 'jquery.magnific-popup.min.js', array( 'jquery' ), '4.8.2', TRUE );
-		//wp_enqueue_script( 'so-google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAlXvhmyhieCZuRGoZMZPVefRFd4HpOxe0', array( 'jquery' ), '4.8.2', TRUE );
+		wp_enqueue_script( 'so-google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAlXvhmyhieCZuRGoZMZPVefRFd4HpOxe0', array( 'jquery' ), '4.8.2', TRUE );
 		wp_enqueue_script( 'so-main', DIR_SHAMS_ONE_JS . 'main.js', array( 'jquery' ), '4.8.2', TRUE );
-		wp_localize_script( 'so-main', 'expertise', $expertise );
 	}
 	
 	add_action( 'wp_enqueue_scripts', 'so_assets' );
