@@ -2,10 +2,11 @@
 /**
  * The template part for displaying section home.
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @since      Twenty Sixteen 1.0
  */
+
 ?>
 
 <section id="home" class="section intro-section"
@@ -13,7 +14,7 @@
 		<?php if ( cs_get_option( 'so_section_home_image' ) ): ?>
             style="background-image:url('<?php echo cs_get_option( 'so_section_home_image' ) ?>');"
 		<?php else: ?>
-            style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . 'intro.jpg' ?>');"
+            style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . 'intro_bg_01.jpg' ?>');"
 		<?php endif; ?>
 	<?php endif; ?>>
     <div class="overlay">
@@ -22,7 +23,7 @@
 		<?php if ( cs_get_option( 'so_section_home_video' ) ): ?>
             <video src="<?php echo cs_get_option( 'so_section_home_video' ) ?>" autoplay loop></video>
 		<?php else: ?>
-            <video src="<?php echo DIR_SHAMS_ONE_VIDEO . 'intro.mp4' ?>" autoplay loop></video>
+            <video src="<?php echo DIR_SHAMS_ONE_VIDEO . 'intro_02.mp4' ?>" autoplay loop></video>
 		<?php endif; ?>
 	<?php endif; ?>
     <!--<div id="particles-js"></div>-->

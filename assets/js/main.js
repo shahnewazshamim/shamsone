@@ -7,7 +7,7 @@
 */
 (function ($) {
 	'use strict';
-	
+	console.log(expertise);
 	/*++++++++++++++++++++++++
 	-----Preloader Effect-----	    
 	++++++++++++++++++++++++++*/
@@ -21,13 +21,7 @@
 	-------Typing Effect------	 		
 	++++++++++++++++++++++++++*/
 	$(".typed-effect").typed({
-		strings: 
-		[
-				'Web Designer', 
-				'UI/UX DESIGNER',
-				'Android Developer',
-				'Wordpress Developer'
-		],
+		strings: expertise,
 		typeSpeed: 50,
 		backDelay: 500,
 		loop: true
@@ -177,7 +171,7 @@
 	/*++++++++++++++++
 	----Google Map----
 	++++++++++++++++++*/
-	/*google.maps.event.addDomListener(window, 'load', init);
+	google.maps.event.addDomListener(window, 'load', init);
 	function init() {
 		var mapLat = $('#gmap').attr('data-map-latitude');
 		var maplng = $('#gmap').attr('data-map-longitude');
@@ -196,7 +190,7 @@
 			title: 'Snazzy!'
 		});
 	}
-	google.maps.event.trigger($("#gmap")[0], 'resize');*/
+	google.maps.event.trigger($("#gmap")[0], 'resize');
 	
 })(jQuery);
 

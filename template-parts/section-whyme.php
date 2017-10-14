@@ -10,7 +10,7 @@
 ?>
 
 <?php if ( ! empty( cs_get_option( 'so_section_whyme_procedure' ) ) ): ?>
-    <section class="section section-padding why-me solid-bg">
+    <section id="whyme" class="section section-padding why-me solid-bg">
         <div class="container">
             <div class="row why-me-content">
 				<?php $processes = cs_get_option( 'so_section_whyme_procedure' ) ?>

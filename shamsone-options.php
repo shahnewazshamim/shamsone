@@ -8,12 +8,13 @@
  */
 
 function shamsone_options( $options ) {
+	
 	$options = array();
-
+	
 	/*******************************************************************************************************************
 	 * Profile Sections
 	 ******************************************************************************************************************/
-	$options['profile'] = array(
+	$options[ 'profile' ] = array(
 		'name'   => 'so_profile',
 		'title'  => 'Profile',
 		'icon'   => 'fa fa-user',
@@ -62,17 +63,39 @@ function shamsone_options( $options ) {
 			),
 		),
 	);
-
+	
 	/*******************************************************************************************************************
 	 * Header Sections
 	 ******************************************************************************************************************/
-	$options['header'] = array(
+	$options[ 'header' ] = array(
 		'name'   => 'so_header',
 		'title'  => 'Header',
 		'icon'   => 'fa fa-header',
-		'fields' => array(),
+		'fields' => array(
+			array(
+				'id'    => 'so_header_logo_text_enable',
+				'type'  => 'switcher',
+				'title' => 'Enable Text Logo',
+				'desc'  => 'By Default Image Logo is active',
+				'help'  => 'If enable Image logo will disappear and Text Logo will be active',
+			),
+			array(
+				'id'         => 'so_header_logo_text',
+				'type'       => 'text',
+				'title'      => 'Text Logo',
+				'default'    => get_bloginfo( 'name' ),
+				'dependency' => array( 'so_header_logo_text_enable', '==', 'true' ),
+			),
+			array(
+				'id'         => 'so_header_logo_image',
+				'type'       => 'upload',
+				'title'      => 'Image Logo',
+				'default'    => get_template_directory_uri() . '/img/md_shamim_shahnewaz.png',
+				'dependency' => array( 'so_header_logo_text_enable', '==', 'false' ),
+			),
+		),
 	);
-
+	
 	/*******************************************************************************************************************
 	 * Single Page Sections
 	 ******************************************************************************************************************/
@@ -113,7 +136,7 @@ function shamsone_options( $options ) {
 						'desc'       => 'Ex: Upload an image for background',
 						'dependency' => array( 'so_section_home_video_enable', '==', 'false' ),
 					),
-
+					
 					array(
 						'id'    => 'so_section_home_intro_line_one',
 						'type'  => 'text',
@@ -125,6 +148,21 @@ function shamsone_options( $options ) {
 						'type'  => 'text',
 						'title' => 'Intro Text Line #02',
 						'desc'  => 'By default your first and last name',
+					),
+					array(
+						'id'              => 'so_section_home_expertise',
+						'type'            => 'group',
+						'title'           => 'Expertness',
+						'desc'            => 'Add expertise to show on home intro section',
+						'button_title'    => 'New Expertise',
+						'accordion_title' => 'Expertise',
+						'fields'          => array(
+							array(
+								'id'    => 'so_section_home_expertise_title',
+								'type'  => 'text',
+								'title' => 'Expertise',
+							),
+						),
 					),
 				),
 			),
@@ -218,7 +256,7 @@ function shamsone_options( $options ) {
 								'type'  => 'text',
 								'title' => 'Level',
 							),
-						)
+						),
 					),
 				),
 			),
@@ -257,7 +295,7 @@ function shamsone_options( $options ) {
 								'type'  => 'textarea',
 								'title' => 'Short Description',
 							),
-						)
+						),
 					),
 				),
 			),
@@ -308,7 +346,7 @@ function shamsone_options( $options ) {
 								'type'  => 'text',
 								'title' => 'Short Description',
 							),
-						)
+						),
 					),
 					array(
 						'id'              => 'so_section_resume_job',
@@ -333,7 +371,7 @@ function shamsone_options( $options ) {
 								'type'  => 'text',
 								'title' => 'Description',
 							),
-						)
+						),
 					),
 				),
 			),
@@ -348,6 +386,43 @@ function shamsone_options( $options ) {
 						'title'   => 'Show on Home Page',
 						'desc'    => 'By Default active',
 						'default' => 1,
+					),
+					array(
+						'id'    => 'so_section_service_title',
+						'type'  => 'text',
+						'title' => 'Title',
+						'desc'  => 'Ex: Lorem ipsum dolor',
+					),
+					array(
+						'id'    => 'so_section_service_subtitle',
+						'type'  => 'textarea',
+						'title' => 'Subtitle',
+						'desc'  => 'Ex: Lorem ipsum dolor sit amet, consectetuer adipiscing elit',
+					),
+					array(
+						'id'              => 'so_section_service_list',
+						'type'            => 'group',
+						'title'           => 'Service Details',
+						'desc'            => 'Add service to show on service section',
+						'button_title'    => 'New Service',
+						'accordion_title' => 'Service',
+						'fields'          => array(
+							array(
+								'id'    => 'so_section_service_list_title',
+								'type'  => 'text',
+								'title' => 'My Offer',
+							),
+							array(
+								'id'    => 'so_section_service_list_icon',
+								'type'  => 'icon',
+								'title' => 'Font Awesome Icon',
+							),
+							array(
+								'id'    => 'so_section_service_list_description',
+								'type'  => 'textarea',
+								'title' => 'Description',
+							),
+						),
 					),
 				),
 			),
@@ -376,6 +451,18 @@ function shamsone_options( $options ) {
 						'title'   => 'Show on Home Page',
 						'desc'    => 'By Default active',
 						'default' => 1,
+					),
+					array(
+						'id'    => 'so_section_portfolio_title',
+						'type'  => 'text',
+						'title' => 'Title',
+						'desc'  => 'Ex: Lorem ipsum dolor',
+					),
+					array(
+						'id'    => 'so_section_portfolio_subtitle',
+						'type'  => 'textarea',
+						'title' => 'Subtitle',
+						'desc'  => 'Ex: Lorem ipsum dolor sit amet, consectetuer adipiscing elit',
 					),
 				),
 			),
@@ -414,7 +501,7 @@ function shamsone_options( $options ) {
 								'type'  => 'text',
 								'title' => 'Statistics Value',
 							),
-						)
+						),
 					),
 				),
 			),
@@ -444,15 +531,35 @@ function shamsone_options( $options ) {
 						'desc'    => 'By Default active',
 						'default' => 1,
 					),
+					array(
+						'id'    => 'so_section_contact_gmap_enable',
+						'type'  => 'switcher',
+						'title' => 'Enable Google Map',
+						'desc'  => 'If enable Google Map will appear',
+					),
+					array(
+						'id'         => 'so_section_contact_gmap_lat',
+						'type'       => 'text',
+						'title'      => 'Latitude',
+						'desc'       => 'Your location latitude',
+						'dependency' => array( 'so_section_contact_gmap_enable', '==', 'true' ),
+					),
+					array(
+						'id'         => 'so_section_contact_gmap_long',
+						'type'       => 'text',
+						'title'      => 'Longitude',
+						'desc'       => 'Your location longitude',
+						'dependency' => array( 'so_section_contact_gmap_enable', '==', 'true' ),
+					),
 				),
 			),
 		),
 	);
-
+	
 	/*******************************************************************************************************************
 	 * Footer Sections
 	 ******************************************************************************************************************/
-	$options['footer'] = array(
+	$options[ 'footer' ] = array(
 		'name'   => 'so_footer',
 		'title'  => 'Footer',
 		'icon'   => 'fa fa-copyright',
@@ -471,11 +578,11 @@ function shamsone_options( $options ) {
 			),
 		),
 	);
-
+	
 	/*******************************************************************************************************************
 	 * Social Options
 	 ******************************************************************************************************************/
-	$options['social'] = array(
+	$options[ 'social' ] = array(
 		'name'   => 'so_social',
 		'title'  => 'Social Network',
 		'icon'   => 'fa fa-share',
@@ -566,8 +673,7 @@ function shamsone_options( $options ) {
 			),
 		),
 	);
-
-
+	
 	return $options;
 }
 
