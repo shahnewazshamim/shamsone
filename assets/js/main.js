@@ -21,7 +21,12 @@
 	-------Typing Effect------	 		
 	++++++++++++++++++++++++++*/
 	$(".typed-effect").typed({
-		strings: expertise,
+		strings: [
+			'Web Application Developer',
+			'Full Stack Web Developer',
+			'Laravel and Vue Expert',
+			'ReactJS and Angular Expert'
+		],
 		typeSpeed: 50,
 		backDelay: 500,
 		loop: true
