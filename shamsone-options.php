@@ -90,7 +90,7 @@ function shamsone_options( $options ) {
 				'id'         => 'so_header_logo_image',
 				'type'       => 'upload',
 				'title'      => 'Image Logo',
-				'default'    => get_template_directory_uri() . '/img/md_shamim_shahnewaz.png',
+				'default'    => get_template_directory_uri() . '/assets/img/md_shamim_shahnewaz.png',
 				'dependency' => array( 'so_header_logo_text_enable', '==', 'false' ),
 			),
 		),
@@ -114,7 +114,7 @@ function shamsone_options( $options ) {
 						'type'    => 'switcher',
 						'title'   => 'Show on Home Page',
 						'desc'    => 'By Default active',
-						'default' => 1,
+						'default' => 0,
 					),
 					array(
 						'id'    => 'so_section_home_video_enable',
@@ -176,7 +176,7 @@ function shamsone_options( $options ) {
 						'type'    => 'switcher',
 						'title'   => 'Show on Home Page',
 						'desc'    => 'By Default active',
-						'default' => 1,
+						'default' => 0,
 					),
 					array(
 						'id'    => 'so_section_about_title',
@@ -201,7 +201,7 @@ function shamsone_options( $options ) {
 						'type'    => 'switcher',
 						'title'   => 'Button One',
 						'desc'    => 'Ex: Hire Me',
-						'default' => 1,
+						'default' => 0,
 					),
 					array(
 						'id'         => 'so_section_about_button_one_text',
@@ -222,7 +222,7 @@ function shamsone_options( $options ) {
 						'type'    => 'switcher',
 						'title'   => 'Button Two',
 						'desc'    => 'Ex: resume',
-						'default' => 1,
+						'default' => 0,
 					),
 					array(
 						'id'         => 'so_section_about_button_two_text',
@@ -270,7 +270,7 @@ function shamsone_options( $options ) {
 						'type'    => 'switcher',
 						'title'   => 'Show on Home Page',
 						'desc'    => 'By Default active',
-						'default' => 1,
+						'default' => 0,
 					),
 					array(
 						'id'              => 'so_section_whyme_procedure',
@@ -309,7 +309,7 @@ function shamsone_options( $options ) {
 						'type'    => 'switcher',
 						'title'   => 'Show on Home Page',
 						'desc'    => 'By Default active',
-						'default' => 1,
+						'default' => 0,
 					),
 					array(
 						'id'    => 'so_section_resume_title',
@@ -385,7 +385,7 @@ function shamsone_options( $options ) {
 						'type'    => 'switcher',
 						'title'   => 'Show on Home Page',
 						'desc'    => 'By Default active',
-						'default' => 1,
+						'default' => 0,
 					),
 					array(
 						'id'    => 'so_section_service_title',
@@ -436,7 +436,7 @@ function shamsone_options( $options ) {
 						'type'    => 'switcher',
 						'title'   => 'Show on Home Page',
 						'desc'    => 'By Default active',
-						'default' => 1,
+						'default' => 0,
 					),
 				),
 			),
@@ -450,7 +450,7 @@ function shamsone_options( $options ) {
 						'type'    => 'switcher',
 						'title'   => 'Show on Home Page',
 						'desc'    => 'By Default active',
-						'default' => 1,
+						'default' => 0,
 					),
 					array(
 						'id'    => 'so_section_portfolio_title',
@@ -476,7 +476,7 @@ function shamsone_options( $options ) {
 						'type'    => 'switcher',
 						'title'   => 'Show on Home Page',
 						'desc'    => 'By Default active',
-						'default' => 1,
+						'default' => 0,
 					),
 					array(
 						'id'              => 'so_section_overview_stat',
@@ -515,7 +515,7 @@ function shamsone_options( $options ) {
 						'type'    => 'switcher',
 						'title'   => 'Show on Home Page',
 						'desc'    => 'By Default active',
-						'default' => 1,
+						'default' => 0,
 					),
 				),
 			),
@@ -529,7 +529,7 @@ function shamsone_options( $options ) {
 						'type'    => 'switcher',
 						'title'   => 'Show on Home Page',
 						'desc'    => 'By Default active',
-						'default' => 1,
+						'default' => 0,
 					),
 					array(
 						'id'    => 'so_section_contact_gmap_enable',

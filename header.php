@@ -23,11 +23,6 @@
 
     <title><?php bloginfo( 'name' ); ?></title>
 
-    <link rel="icon" href="assets/img/favicons/favicon.html">
-    <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.html">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-touch-icon-72x72.html">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-touch-icon-114x114.html">
-
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>

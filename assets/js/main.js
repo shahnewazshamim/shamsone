@@ -7,7 +7,7 @@
 */
 (function ($) {
 	'use strict';
-	console.log(expertise);
+
 	/*++++++++++++++++++++++++
 	-----Preloader Effect-----	    
 	++++++++++++++++++++++++++*/
@@ -171,7 +171,7 @@
 	/*++++++++++++++++
 	----Google Map----
 	++++++++++++++++++*/
-	google.maps.event.addDomListener(window, 'load', init);
+	/*google.maps.event.addDomListener(window, 'load', init);
 	function init() {
 		var mapLat = $('#gmap').attr('data-map-latitude');
 		var maplng = $('#gmap').attr('data-map-longitude');
@@ -190,7 +190,7 @@
 			title: 'Snazzy!'
 		});
 	}
-	google.maps.event.trigger($("#gmap")[0], 'resize');
+	google.maps.event.trigger($("#gmap")[0], 'resize');*/
 	
 })(jQuery);
 
