@@ -10,7 +10,7 @@
 ?>
 
 <section id="testimonial" class="section section-padding image-bg testimonial"
-         style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . "testimonial-bg.jpg" ?>');">
+         style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . "testimonial_bg_01.jpg" ?>');">
     <!--Image Overlay-->
     <div class="overlay"></div>
     <div class="container">
@@ -19,48 +19,35 @@
             <div class="col-md-8 col-md-push-2">
                 <div class="testimonial-item">
                     <div class="testimonial-carousel owl-theme">
-                        <!--Single Testimonial-->
-                        <div class="item single-testimonial">
-                            <p class="test-text">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                quis nostrud exerci. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                nonummy nibh euismod tincidunt ut laoreet .
-                            </p>
-                            <div class="test-author-info">
-                                <p>Jhone Doe - CEO, Company Name</p>
-                            </div>
-                        </div>
-                        <!--Single Testimonial-->
-                        <div class="item single-testimonial">
-                            <p class="test-text">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                quis nostrud exerci. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                nonummy nibh euismod tincidunt ut laoreet .
-                            </p>
-                            <div class="test-author-info">
-                                <p>Jhone Doe - CEO, Company Name</p>
-                            </div>
-                        </div>
-                        <!--Single Testimonial-->
-                        <div class="item single-testimonial">
-                            <p class="test-text">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                quis nostrud exerci. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                nonummy nibh euismod tincidunt ut laoreet .
-                            </p>
-                            <div class="test-author-info">
-                                <p>Jhone Doe - CEO, Company Name</p>
-                            </div>
-                        </div>
+						<?php $feedbacks = cs_get_option( 'so_section_testimonial_list' ) ?>
+						<?php if ( is_array( $feedbacks ) ) : ?>
+							<?php foreach ( $feedbacks as $key => $value ) : ?>
+                                <!--Single Testimonial-->
+                                <div class="item single-testimonial">
+                                    <p class="test-text"><?php echo $value[ 'so_section_testimonial_list_feedback' ] ?></p>
+                                    <div class="test-author-info">
+                                        <p><?php echo $value[ 'so_section_testimonial_list_client' ] ?></p>
+                                    </div>
+                                </div>
+							<?php endforeach; ?>
+						<?php endif; ?>
                     </div>
                     <ul class="testimonial-pagination">
-                        <li data-slide="0" class="active"><img src="<?php echo DIR_SHAMS_ONE_IMG . 'people1.jpg' ?>"
-                                                               alt=""></li>
-                        <li data-slide="1"><img src="<?php echo DIR_SHAMS_ONE_IMG . 'people2.jpg' ?>" alt=""></li>
-                        <li data-slide="2"><img src="<?php echo DIR_SHAMS_ONE_IMG . 'people3.jpg' ?>" alt=""></li>
+						<?php if ( is_array( $feedbacks ) ) : ?>
+							<?php $count = 0; ?>
+							<?php foreach ( $feedbacks as $key => $value ) : ?>
+								<?php if ( $value[ 'so_section_testimonial_list_logo' ] ) : ?>
+                                    <li data-slide="<?php echo $count ?>" <?php echo ( $count == 0 ) ? 'class="active"' : '' ?>>
+                                        <img src="<?php echo $value[ 'so_section_testimonial_list_logo' ] ?>" alt="">
+                                    </li>
+								<?php else: ?>
+                                    <li data-slide="<?php echo $count ?>" <?php echo ( $count == 0 ) ? 'class="active"' : '' ?>>
+                                        <img src="<?php echo DIR_SHAMS_ONE_IMG . 'author_profile.png' ?>" alt="">
+                                    </li>
+								<?php endif; ?>
+								<?php $count ++ ?>
+							<?php endforeach; ?>
+						<?php endif; ?>
                     </ul>
                 </div>
             </div>

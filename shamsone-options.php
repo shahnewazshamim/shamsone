@@ -141,7 +141,7 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'type'    => 'switcher',
 							'title'   => 'Show on Home Page',
 							'desc'    => 'By Default active',
-							'default' => 0,
+							'default' => 1,
 						),
 						array(
 							'id'    => 'so_section_home_video_enable',
@@ -203,7 +203,7 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'type'    => 'switcher',
 							'title'   => 'Show on Home Page',
 							'desc'    => 'By Default active',
-							'default' => 0,
+							'default' => 1,
 						),
 						array(
 							'id'    => 'so_section_about_title',
@@ -228,7 +228,7 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'type'    => 'switcher',
 							'title'   => 'Button One',
 							'desc'    => 'Ex: Hire Me',
-							'default' => 0,
+							'default' => 1,
 						),
 						array(
 							'id'         => 'so_section_about_button_one_text',
@@ -249,7 +249,7 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'type'    => 'switcher',
 							'title'   => 'Button Two',
 							'desc'    => 'Ex: resume',
-							'default' => 0,
+							'default' => 1,
 						),
 						array(
 							'id'         => 'so_section_about_button_two_text',
@@ -297,7 +297,7 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'type'    => 'switcher',
 							'title'   => 'Show on Home Page',
 							'desc'    => 'By Default active',
-							'default' => 0,
+							'default' => 1,
 						),
 						array(
 							'id'              => 'so_section_whyme_procedure',
@@ -336,7 +336,7 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'type'    => 'switcher',
 							'title'   => 'Show on Home Page',
 							'desc'    => 'By Default active',
-							'default' => 0,
+							'default' => 1,
 						),
 						array(
 							'id'    => 'so_section_resume_title',
@@ -412,7 +412,7 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'type'    => 'switcher',
 							'title'   => 'Show on Home Page',
 							'desc'    => 'By Default active',
-							'default' => 0,
+							'default' => 1,
 						),
 						array(
 							'id'    => 'so_section_service_title',
@@ -463,7 +463,32 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'type'    => 'switcher',
 							'title'   => 'Show on Home Page',
 							'desc'    => 'By Default active',
-							'default' => 0,
+							'default' => 1,
+						),
+						array(
+							'id'              => 'so_section_testimonial_list',
+							'type'            => 'group',
+							'title'           => 'Testimonials',
+							'desc'            => 'Add some client feedbacks to show on testimonial section',
+							'button_title'    => 'New Testimonials',
+							'accordion_title' => 'Clients',
+							'fields'          => array(
+								array(
+									'id'    => 'so_section_testimonial_list_client',
+									'type'  => 'text',
+									'title' => 'Name',
+								),
+								array(
+									'id'    => 'so_section_testimonial_list_logo',
+									'type'  => 'upload',
+									'title' => 'Logo',
+								),
+								array(
+									'id'    => 'so_section_testimonial_list_feedback',
+									'type'  => 'textarea',
+									'title' => 'Feedback',
+								),
+							),
 						),
 					),
 				),
@@ -477,7 +502,7 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'type'    => 'switcher',
 							'title'   => 'Show on Home Page',
 							'desc'    => 'By Default active',
-							'default' => 0,
+							'default' => 1,
 						),
 						array(
 							'id'    => 'so_section_portfolio_title',
@@ -503,7 +528,7 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'type'    => 'switcher',
 							'title'   => 'Show on Home Page',
 							'desc'    => 'By Default active',
-							'default' => 0,
+							'default' => 1,
 						),
 						array(
 							'id'              => 'so_section_overview_stat',
@@ -542,7 +567,7 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'type'    => 'switcher',
 							'title'   => 'Show on Home Page',
 							'desc'    => 'By Default active',
-							'default' => 0,
+							'default' => 1,
 						),
 					),
 				),
@@ -556,13 +581,19 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'type'    => 'switcher',
 							'title'   => 'Show on Home Page',
 							'desc'    => 'By Default active',
-							'default' => 0,
+							'default' => 1,
 						),
 						array(
 							'id'    => 'so_section_contact_gmap_enable',
 							'type'  => 'switcher',
 							'title' => 'Enable Google Map',
 							'desc'  => 'If enable Google Map will appear',
+						),
+						array(
+							'id'    => 'so_section_contact_shortcode',
+							'type'  => 'textarea',
+							'title' => 'Short Code',
+							'desc'  => 'Contact Form 7 Short Code',
 						),
 						array(
 							'id'         => 'so_section_contact_gmap_lat',
