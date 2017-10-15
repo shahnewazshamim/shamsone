@@ -590,10 +590,10 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'desc'  => 'If enable Google Map will appear',
 						),
 						array(
-							'id'         => 'so_section_contact_shortcode',
-							'type'       => 'textarea',
-							'title'      => 'Short Code',
-							'desc'       => 'Contact Form 7 Short Code',
+							'id'    => 'so_section_contact_shortcode',
+							'type'  => 'textarea',
+							'title' => 'Short Code',
+							'desc'  => 'Contact Form 7 Short Code',
 						),
 						array(
 							'id'         => 'so_section_contact_gmap_lat',

@@ -97,6 +97,7 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'portfolio-thumb', 384, 310, TRUE );
 add_image_size( 'related-thumb', 241, 152, TRUE );
 
+
 /* * *********************************************************************************************************************
  * Include Shams One Assets (Stylesheets, JavaScripts)
  * ******************************************************************************************************************** */
@@ -107,8 +108,10 @@ if ( ! function_exists( 'so_assets' ) ) {
 		
 		$expertise = array();
 		if ( in_array( 'codestar-framework-1.0.1/cs-framework.php', get_option( 'active_plugins' ) ) ) {
-			foreach ( cs_get_option( 'so_section_home_expertise' ) as $key => $value ) {
-				$expertise[] = $value[ 'so_section_home_expertise_title' ];
+			if ( ! empty( cs_get_option( 'so_section_home_expertise' ) ) ) {
+				foreach ( cs_get_option( 'so_section_home_expertise' ) as $key => $value ) {
+					$expertise[] = $value[ 'so_section_home_expertise_title' ];
+				}
 			}
 		}
 		
