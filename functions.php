@@ -44,7 +44,7 @@ function so__register_required_plugins() {
 		array(
 			'name'               => 'Codestar Framework',
 			// The plugin name.
-			'slug'               => 'codestar-framework-1.0.1',
+			'slug'               => 'codestar-framework',
 			// The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/lib/plugins/codestar-framework-1.0.1.zip',
 			// The plugin source.
@@ -97,7 +97,6 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'portfolio-thumb', 384, 310, TRUE );
 add_image_size( 'related-thumb', 241, 152, TRUE );
 
-
 /* * *********************************************************************************************************************
  * Include Shams One Assets (Stylesheets, JavaScripts)
  * ******************************************************************************************************************** */
@@ -106,8 +105,8 @@ if ( ! function_exists( 'so_assets' ) ) {
 	
 	function so_assets() {
 		
-		$expertise = array();
-		if ( in_array( 'codestar-framework-1.0.1/cs-framework.php', get_option( 'active_plugins' ) ) ) {
+		$expertise = array( get_bloginfo( 'name' ), get_bloginfo( 'description' ) );
+		if ( in_array( 'codestar-framework/cs-framework.php', get_option( 'active_plugins' ) ) ) {
 			if ( ! empty( cs_get_option( 'so_section_home_expertise' ) ) ) {
 				foreach ( cs_get_option( 'so_section_home_expertise' ) as $key => $value ) {
 					$expertise[] = $value[ 'so_section_home_expertise_title' ];
