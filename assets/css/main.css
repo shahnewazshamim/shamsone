@@ -624,6 +624,7 @@ p{
 	-webkit-border-radius:50%;
 	border:1px dashed #a7a5a5;
 	padding:10px;
+    filter: grayscale(0.7);
 }
 .profile-photo .link-list{
 	overflow:hidden;
@@ -1405,6 +1406,15 @@ figure.effect-sadie:hover figcaption::before{
 	padding: 10px 25px;
 }
 
+span.wpcf7-not-valid-tip {
+    color: #f00;
+    font-size: 0.8em;
+    font-weight: normal;
+    display: block;
+    line-height: 25px;
+    padding-left: 45px;
+}
+
 .success {
 	padding: 1em;
 	margin-bottom: 0.75rem;
@@ -1417,8 +1427,15 @@ figure.effect-sadie:hover figcaption::before{
 	border-radius: 4px;
 	margin-top:15px;
 }
+div.wpcf7-validation-errors {
+    border: none;
+}
+div.wpcf7-response-output {
+    margin: 0;
+    padding: 0;
+}
 
-.error {
+.error, div.wpcf7-response-output {
 	padding: 1em;
 	margin-bottom: 0.75rem;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
