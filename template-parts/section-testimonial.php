@@ -10,7 +10,11 @@
 ?>
 
 <section id="testimonial" class="section section-padding image-bg testimonial"
-         style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . "testimonial_bg_01.jpg" ?>');">
+	<?php if ( cs_get_option( 'so_section_testimonial_image' ) ): ?>
+        style="background-image:url('<?php echo cs_get_option( 'so_section_testimonial_image' ) ?>');"
+	<?php else: ?>
+        style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . cs_get_option( 'so_section_testimonial_default_image' ) ?>');"
+	<?php endif; ?>
     <!--Image Overlay-->
     <div class="overlay"></div>
     <div class="container">

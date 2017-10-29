@@ -11,7 +11,11 @@
 
 <?php if ( ! empty( cs_get_option( 'so_section_overview_stat' ) ) ): ?>
     <section id="overview" class="section section-padding overview image-bg"
-             style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . 'intro_bg_06.jpg' ?>');">
+	    <?php if ( cs_get_option( 'so_section_overview_image' ) ): ?>
+            style="background-image:url('<?php echo cs_get_option( 'so_section_overview_image' ) ?>');"
+	    <?php else: ?>
+            style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . cs_get_option( 'so_section_overview_default_image' ) ?>');"
+	    <?php endif; ?>
         <!--Image Overlay-->
         <div class="overlay"></div>
         <div class="container">
