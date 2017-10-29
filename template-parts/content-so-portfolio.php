@@ -33,7 +33,38 @@
 			<?php $post_meta = get_post_meta( $post->ID, '_so_portfolio_post_options', TRUE ); ?>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-					<?php the_post_thumbnail( '', array( 'class' => 'img-responsive' ) ); ?>
+					<?php $gallery = $post_meta[ 'so_portfolio_screenshots' ]; ?>
+					<?php if ( ! empty( $gallery ) ): ?>
+                        <div id="portfolio-gallery" class="carousel slide" data-ride="carousel">
+							<?php $screenshots = explode( ',', $gallery ); ?>
+							<?php $counter = 0; ?>
+							<?php $slide_to = 0; ?>
+                            <ol class="carousel-indicators">
+								<?php foreach ( $screenshots as $screenshot ) : ?>
+                                    <li data-target="#portfolio-gallery" data-slide-to="<?php echo $slide_to ?>"
+                                        class="<?php echo ( ! $slide_to ) ? 'active' : '' ?>"></li>
+									<?php $slide_to ++ ?>
+								<?php endforeach; ?>
+                            </ol>
+                            <div class="carousel-inner">
+								<?php foreach ( $screenshots as $screenshot ) : ?>
+									<?php $attachment = wp_get_attachment_image_src( $screenshot, 'full' ); ?>
+                                    <div class="item <?php echo ( ! $counter ) ? 'active' : '' ?>">
+                                        <img src="<?php echo $attachment[ 0 ] ?>" alt="" style="width: 100%">
+                                    </div>
+									<?php $counter ++ ?>
+								<?php endforeach; ?>
+                            </div>
+                            <a class="left carousel-control" href="#portfolio-gallery" data-slide="prev">
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#portfolio-gallery" data-slide="next">
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+					<?php else: ?>
+						<?php the_post_thumbnail( '', array( 'class' => 'img-responsive' ) ); ?>
+					<?php endif; ?>
                 </div>
             </div>
             <div class="row">

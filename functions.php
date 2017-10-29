@@ -196,7 +196,7 @@ if ( ! function_exists( 'so_portfolio_post_type' ) ) {
 			),
 			'public'      => TRUE,
 			'has_archive' => TRUE,
-			'rewrite'     => array( 'slug' => 'so-portfolio' ),
+			'rewrite'     => array( 'slug' => 'portfolio' ),
 			'menu_icon'   => 'dashicons-portfolio',
 			'supports'    => array( 'title', 'editor', 'thumbnail' ),
 		) );
@@ -227,7 +227,7 @@ if ( ! function_exists( 'so_portfolio_type_taxonomy' ) ) {
 			'show_ui'           => TRUE,
 			'show_admin_column' => TRUE,
 			'query_var'         => TRUE,
-			'rewrite'           => array( 'slug' => 'so-portfolio-type' ),
+			'rewrite'           => array( 'slug' => 'portfolio-type' ),
 		) );
 	}
 	
@@ -374,6 +374,21 @@ if ( ! function_exists( 'so_portfolio_post_type_metabox_options' ) ) {
 							'type'  => 'text',
 							'title' => 'Client Name',
 							'desc'  => 'Add the client name to show on portfolio details',
+						),
+					),
+				),
+				array(
+					'name'   => 'so_portfolio_gallery',
+					'title'  => 'Screenshots / Gallery',
+					'icon'   => 'fa fa-image',
+					'fields' => array(
+						array(
+							'id'          => 'so_portfolio_screenshots',
+							'type'        => 'gallery',
+							'title'       => 'Screenshots',
+							'add_title'   => 'Add Screenshots',
+							'edit_title'  => 'Edit Screenshots',
+							'clear_title' => 'Remove Screenshots',
 						),
 					),
 				),
