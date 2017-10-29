@@ -62,18 +62,26 @@
 				
 				<?php if ( ! empty( $address_list ) ) : ?>
 					<?php $titles = array(
-						'map'   => 'ADDRESS',
-						'phone' => 'PHONE',
-						'mail'  => 'E-MAIL',
-						'link'  => 'WEB SITE',
+						'map'   => 'Location',
+						'phone' => 'Contact',
+						'mail'  => 'Email',
+						'link'  => 'Website',
 					) ?>
 					<?php foreach ( $address_list as $icon => $value )  : ?>
-						<?php $icon = str_replace( '_', '-', str_replace( 'so_profile_address_', '', $icon ) ); ?>
+						<?php $key = $icon = str_replace( '_', '-', str_replace( 'so_profile_address_', '', $icon ) ); ?>
+						<?php
+						
+						if ( cs_get_option( 'so_profile_icon_address_' . $icon ) ) {
+							$icon = cs_get_option( 'so_profile_icon_address_' . $icon );
+						} else {
+							$icon = 'pe-7s-' . str_replace( '_', '-', str_replace( 'so_profile_address_', '', $icon ) );
+						}
+						?>
                         <!--Single Contact Info-->
                         <div class="col-md-3 col-sm-6 single-contact-detail">
                             <div class="header">
-                                <i class="pe-7s-<?php echo $icon ?>"></i>
-                                <h4><?php echo $titles[ $icon ] ?></h4>
+                                <i class="<?php echo $icon ?>"></i>
+                                <h4><?php echo $titles[ $key ] ?></h4>
                             </div>
                             <p><?php echo $value ?></p>
                         </div>

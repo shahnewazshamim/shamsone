@@ -71,10 +71,22 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 					'desc'  => 'Ex: House no #706, Road no #10, Baridhara DOHS, Dhaka',
 				),
 				array(
+					'id'    => 'so_profile_icon_address_map',
+					'type'  => 'icon',
+					'title' => 'Address Icon',
+					'desc'  => 'Ex: Replace the default icon',
+				),
+				array(
 					'id'    => 'so_profile_address_phone',
 					'type'  => 'text',
 					'title' => 'Phone No',
 					'desc'  => 'Ex: +8801713302618',
+				),
+				array(
+					'id'    => 'so_profile_icon_address_phone',
+					'type'  => 'icon',
+					'title' => 'Phone Icon',
+					'desc'  => 'Ex: Replace the default icon',
 				),
 				array(
 					'id'    => 'so_profile_address_mail',
@@ -83,10 +95,22 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 					'desc'  => 'Ex: info@shamim.ninja',
 				),
 				array(
+					'id'    => 'so_profile_icon_address_mail',
+					'type'  => 'icon',
+					'title' => 'Email Icon',
+					'desc'  => 'Ex: Replace the default icon',
+				),
+				array(
 					'id'    => 'so_profile_address_link',
 					'type'  => 'text',
 					'title' => 'Website',
 					'desc'  => 'Ex: http://shamim.ninja',
+				),
+				array(
+					'id'    => 'so_profile_icon_address_link',
+					'type'  => 'icon',
+					'title' => 'Website Icon',
+					'desc'  => 'Ex: Replace the default icon',
 				),
 			),
 		);

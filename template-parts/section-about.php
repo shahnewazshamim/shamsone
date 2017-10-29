@@ -99,8 +99,13 @@
 							
 							if ( ! empty( $address_list ) ) {
 								foreach ( $address_list as $icon => $value ) {
-									$icon = str_replace( '_', '-', str_replace( 'so_profile_address_', '', $icon ) );
-									echo '<li><i class="pe-7s-' . $icon . '" aria-hidden="true"></i><p>' . $value . '</p></li>';
+								    $icon = str_replace( '_', '-', str_replace( 'so_profile_address_', '', $icon ) );
+									if(cs_get_option('so_profile_icon_address_' . $icon)) {
+										$icon = cs_get_option('so_profile_icon_address_' . $icon);
+                                    } else {
+										$icon = 'pe-7s-' . str_replace( '_', '-', str_replace( 'so_profile_address_', '', $icon ) );
+                                    }
+									echo '<li><i class="' . $icon . '" aria-hidden="true"></i><p>' . $value . '</p></li>';
 								}
 							}
 							?>
