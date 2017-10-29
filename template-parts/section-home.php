@@ -14,7 +14,7 @@
 		<?php if ( cs_get_option( 'so_section_home_image' ) ): ?>
             style="background-image:url('<?php echo cs_get_option( 'so_section_home_image' ) ?>');"
 		<?php else: ?>
-            style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . 'intro_bg_01.jpg' ?>');"
+            style="background-image:url('<?php echo DIR_SHAMS_ONE_IMG . cs_get_option( 'so_section_home_default_image' ) ?>');"
 		<?php endif; ?>
 	<?php endif; ?>>
     <div class="overlay">
@@ -23,7 +23,8 @@
 		<?php if ( cs_get_option( 'so_section_home_video' ) ): ?>
             <video src="<?php echo cs_get_option( 'so_section_home_video' ) ?>" autoplay loop></video>
 		<?php else: ?>
-            <video src="<?php echo DIR_SHAMS_ONE_VIDEO . 'intro_02.mp4' ?>" autoplay loop></video>
+            <video src="<?php echo DIR_SHAMS_ONE_VIDEO . cs_get_option( 'so_section_home_default_video' ) ?>" autoplay
+                   loop></video>
 		<?php endif; ?>
 	<?php endif; ?>
     <!--<div id="particles-js"></div>-->

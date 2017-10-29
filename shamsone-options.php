@@ -163,7 +163,37 @@ if ( ! function_exists( 'shamsone_options' ) ) {
 							'desc'       => 'Ex: Upload an image for background',
 							'dependency' => array( 'so_section_home_video_enable', '==', 'false' ),
 						),
-						
+						array(
+							'id'         => 'so_section_home_default_image',
+							'type'       => 'select',
+							'title'      => 'Default Image Background',
+							'desc'       => 'Ex: Default image for background. If custom image is set default image is automatically disabled',
+							'dependency' => array( 'so_section_home_video_enable', '==', 'false' ),
+							'options'    => array(
+								'upload'          => 'Select an Image',
+								'intro_bg_01.jpg' => 'Image Background 01',
+								'intro_bg_02.jpg' => 'Image Background 02',
+								'intro_bg_03.jpg' => 'Image Background 03',
+								'intro_bg_04.jpg' => 'Image Background 04',
+								'intro_bg_05.jpg' => 'Image Background 05',
+								'intro_bg_06.jpg' => 'Image Background 06',
+							),
+							'default'    => 'intro_bg_01.jpg',
+						),
+						array(
+							'id'         => 'so_section_home_default_video',
+							'type'       => 'select',
+							'title'      => 'Default Image Background',
+							'desc'       => 'Ex: Default video for background. If custom video is set default video is automatically disabled',
+							'dependency' => array( 'so_section_home_video_enable', '==', 'true' ),
+							'options'    => array(
+								'upload'       => 'Select a Video',
+								'intro_01.mp4' => 'Video Background 01',
+								'intro_02.mp4' => 'Video Background 02',
+								'intro_03.mp4' => 'Video Background 03',
+							),
+							'default'    => 'intro_01.mp4',
+						),
 						array(
 							'id'    => 'so_section_home_intro_line_one',
 							'type'  => 'text',
