@@ -3,8 +3,8 @@
  * The template for displaying the footer.
  *
  * @package    WordPress
- * @subpackage Shams_One
- * @since      Shams One 1.0.0
+ * @subpackage Shamim_Ninja
+ * @since      Shamim Ninja 1.0.0
  */
 ?>
 

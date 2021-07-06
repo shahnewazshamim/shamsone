@@ -5,8 +5,8 @@
  * Displays all of the head element and everything up until the "site-content" div.
  *
  * @package    WordPress
- * @subpackage Shams_One
- * @since      Shams One 1.0.0
+ * @subpackage Shamim_Ninja
+ * @since      Shamim Ninja 1.0.0
  */
 ?>
 
