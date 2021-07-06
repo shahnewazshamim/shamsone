@@ -14,31 +14,16 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="Boch | A Solution to your Portfolio">
-    <meta name="author" content="">
-    <meta name="robots" content="index,follow">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?php bloginfo( 'name' ); ?></title>
-
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <meta name="description" content="Md. Shamim Shahnewaz is a professional software engineer for the last <?php echo (date('Y') - 2008) ?> years." />
+    <meta name="keywords" content="Md. Shamim Shahnewaz, Software Engineer, Software Developer, Laravel, PHP, MySQL, Angular, React, Node, Mongodb developer" />
+    <meta name="author" content="Md. Shamim Shahnewaz" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
-<body>
-<!---->
-<!--Start Preloading Effect-->
-<!---->
-<div id="status">
-    <div id="preloader">
-        <div class="uil-reload-css" style="-webkit-transform:scale(0.9)"><div></div></div>
-    </div>
-</div>
-<!---->
-<!--End Preloading Effect-->
-<!---->
+<body class="flat-demo">
+
+<div id="overlayer"></div>
+<span class="loader"></span>
