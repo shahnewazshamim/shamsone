@@ -46,7 +46,6 @@ define("DIR_MSS_JS", DIR_MSS_STYLE . "/assets/js/");
  **********************************************************************************************************************/
 
 add_theme_support( 'post-thumbnails' );
-add_theme_support( 'stories-post-thumbnails' );
 add_theme_support( 'responsive-embeds' );
 
 
@@ -79,4 +78,35 @@ if (!function_exists('mss_assets')) {
 	}
 
 	add_action('wp_enqueue_scripts', 'mss_assets');
+}
+
+
+/***********************************************************************************************************************
+ * Register Navigation on Theme
+ **********************************************************************************************************************/
+
+if ( ! function_exists( 'register_mss_menu' ) ) {
+
+	function register_mss_menu() {
+
+		register_nav_menu( 'primary-menu', __( 'Primary Menu' ) );
+	}
+
+	add_action( 'init', 'register_mss_menu' );
+}
+
+
+
+
+
+/* FOR DEV */
+function dd($var) {
+	echo '<pre>';
+	var_dump($var);
+	exit;
+}
+function pr($var) {
+	echo '<pre>';
+	print_r($var);
+	exit;
 }
