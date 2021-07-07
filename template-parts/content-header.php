@@ -10,7 +10,7 @@
 
 <header>
 	<div class="header-navbar h-100">
-		<a class="navbar-brand" href="#"><b>A</b><span>Arshia</span></a>
+		<a class="navbar-brand" href="#"><b>S</b><span>Dev</span></a>
 		<ul class="list-group menu text-center" id="menu">
 			<?php
 			foreach (cs_get_options() as $key => $value) {

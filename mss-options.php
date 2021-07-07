@@ -114,28 +114,6 @@ if (class_exists('CSF')) {
 
 
 	/*******************************************************************************************************************
-	 * Contact Section
-	 ******************************************************************************************************************/
-	CSF::createSection($prefix, array(
-		'id'     => 'menu_contact',
-		'title'  => 'Contact Page',
-		'icon'   => 'fa fa-envelope-open',
-		'fields' => array(
-			array(
-				'id'    => 'menu_contact_icon',
-				'type'  => 'icon',
-				'title' => 'Contact Icon',
-			),
-			array(
-				'id'    => 'menu_contact_description',
-				'type'  => 'text',
-				'title' => 'Contact Description',
-			),
-		)
-	));
-
-
-	/*******************************************************************************************************************
 	 * Blog Section
 	 ******************************************************************************************************************/
 	CSF::createSection($prefix, array(
@@ -152,6 +130,28 @@ if (class_exists('CSF')) {
 				'id'    => 'menu_blog_description',
 				'type'  => 'text',
 				'title' => 'Blog Description',
+			),
+		)
+	));
+
+
+	/*******************************************************************************************************************
+	 * Contact Section
+	 ******************************************************************************************************************/
+	CSF::createSection($prefix, array(
+		'id'     => 'menu_contact',
+		'title'  => 'Contact Page',
+		'icon'   => 'fa fa-envelope-open',
+		'fields' => array(
+			array(
+				'id'    => 'menu_contact_icon',
+				'type'  => 'icon',
+				'title' => 'Contact Icon',
+			),
+			array(
+				'id'    => 'menu_contact_description',
+				'type'  => 'text',
+				'title' => 'Contact Description',
 			),
 		)
 	));

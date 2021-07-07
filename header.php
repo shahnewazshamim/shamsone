@@ -25,5 +25,5 @@
 </head>
 <body class="flat-demo">
 
-<!--<div id="overlayer"></div>
-<span class="loader"></span>-->
+<div id="overlayer"></div>
+<span class="loader"></span>

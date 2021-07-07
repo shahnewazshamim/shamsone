@@ -12,8 +12,6 @@
 
 <?php get_template_part( 'template-parts/content', 'header' ); ?>
 	<main id="main">
-		<?php get_template_part( 'template-parts/section', 'hero' ); ?>
-		<?php get_template_part( 'template-parts/section', 'about' ); ?>
 		<?php foreach (cs_get_options() as $key => $value) {
 			if ( strpos( $key, '_icon' ) !== false ) {
 				if($value == '') continue;
@@ -24,4 +22,8 @@
 		}
 		?>
 	</main>
+    <div class="next-prev-page">
+        <button type="button" class="prev-page bg-base-color"><i class="fa fa-angle-up text-white"></i></button>
+        <button type="button" class="next-page bg-base-color mt-3"><i class="fa fa-angle-down text-white"></i></button>
+    </div>
 <?php get_footer(); ?>
