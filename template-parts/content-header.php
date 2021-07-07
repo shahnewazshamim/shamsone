@@ -10,8 +10,10 @@
 
 <header>
 	<div class="header-navbar h-100">
-		<a class="navbar-brand" href="#"><b>S</b><span>Dev</span></a>
-		<ul class="list-group menu text-center" id="menu">
+		<?php if (cs_get_options()['mss_is_logo_enable']): ?>
+		    <a class="navbar-brand" href="<?php echo bloginfo('url')?>"><b><?php echo cs_get_options()['mss_logo_initial'] ?></b><span><?php echo cs_get_options()['mss_logo_text'] ?></span></a>
+		<?php endif; ?>
+        <ul class="list-group menu text-center" id="menu">
 			<?php
 			foreach (cs_get_options() as $key => $value) {
 				if ( strpos( $key, '_icon' ) !== false ) {

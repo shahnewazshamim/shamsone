@@ -26,6 +26,51 @@ if (class_exists('CSF')) {
 
 
 	/*******************************************************************************************************************
+	 * General Section
+	 ******************************************************************************************************************/
+	CSF::createSection($prefix, array(
+		'id'     => 'mss_general',
+		'title'  => 'General',
+		'icon'   => 'fa fa-dashboard',
+		'fields' => array(
+			array(
+				'id'    => 'mss_profile_image',
+				'type'  => 'media',
+				'title' => 'Profile Picture',
+			),
+			array(
+				'id'    => 'mss_profile_image_width',
+				'type'  => 'slider',
+				'min'   => 10,
+				'max'   => 100,
+				'step'  => 5,
+				'title' => 'Profile Picture Width',
+			),
+			array(
+				'id'         => 'mss_is_logo_enable',
+				'type'       => 'switcher',
+				'text_on'    => 'Enable',
+				'text_off'   => 'Disable',
+				'text_width' => 100,
+				'title'      => 'Enable Social Icon in "FOOTER"',
+			),
+			array(
+				'id'         => 'mss_logo_initial',
+				'type'       => 'text',
+				'title'      => 'Logo Drop Cap',
+				'dependency' => array( 'mss_is_logo_enable', '==', 'true' ),
+			),
+			array(
+				'id'         => 'mss_logo_text',
+				'type'       => 'text',
+				'title'      => 'Logo Text',
+				'dependency' => array( 'mss_is_logo_enable', '==', 'true' ),
+			),
+		)
+	));
+
+
+	/*******************************************************************************************************************
 	 * Hero Section
 	 ******************************************************************************************************************/
 	CSF::createSection($prefix, array(
@@ -39,9 +84,46 @@ if (class_exists('CSF')) {
 				'title' => 'Hero Icon',
 			),
 			array(
-				'id'    => 'menu_hero_description',
+				'id'    => 'mss_hero_title',
 				'type'  => 'text',
+				'title' => 'Hero Title',
+			),
+			array(
+				'id'    => 'mss_hero_subtitle',
+				'type'  => 'text',
+				'title' => 'Hero Subtitle',
+			),
+			array(
+				'id'    => 'mss_hero_description',
+				'type'  => 'textarea',
 				'title' => 'Hero Description',
+			),
+			array(
+				'id'                     => 'mss_social_items',
+				'type'                   => 'group',
+				'min'                    => 2,
+				'max'                    => 5,
+				'accordion_title_number' => true,
+				'title'                  => 'Social Media Items',
+				'desc'                   => 'Set the social media.',
+				'button_title'           => 'Add new social . . .',
+				'fields'                 => array(
+					array(
+						'id'    => 'mss_social_items_title',
+						'type'  => 'text',
+						'title' => 'Title'
+					),
+					array(
+						'id'    => 'mss_social_items_url',
+						'type'  => 'text',
+						'title' => 'URL'
+					),
+					array(
+						'id'    => 'mss_social_items_icon',
+						'type'  => 'text',
+						'title' => 'Icon name (as per SVG)'
+					),
+				),
 			),
 		)
 	));

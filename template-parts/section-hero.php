@@ -15,30 +15,17 @@
 				<div class="row align-items-center">
 					<div class="col-lg-6 order-2 order-lg-1">
 						<div class="hero-content">
-							<h1 class="mb-3">I'M Jessy Doe</h1>
-							<h4 class="text-capitalize mb-0"><span class="base-color">A  </span> <span class="element" data-elements="UI Designer.,Web Designer.,Web Developer."></span></h4>
-							<p class="max-width-450 mx-0 my-4">In a professional context it often happens that private clients corder a publication to be made.</p>
+							<h1 class="mb-3"><?php echo cs_get_options()['mss_hero_title'] ?></h1>
+							<h4 class="text-capitalize mb-0"><span class="base-color">A  </span> <span class="element" data-elements="<?php echo cs_get_options()['mss_hero_subtitle'] ?>"></span></h4>
+							<p class="max-width-450 mx-0 my-4"><?php echo cs_get_options()['mss_hero_description'] ?></p>
 							<ul class="list-inline hero-social">
-								<li class="list-inline-item">
-									<a href="javascript:void(0);">
-										<img src="<?php echo DIR_MSS_IMG ?>facebook.svg" alt="">
-									</a>
-								</li>
-								<li class="list-inline-item">
-									<a href="javascript:void(0);">
-										<img src="<?php echo DIR_MSS_IMG ?>twitter.svg" alt="">
-									</a>
-								</li>
-								<li class="list-inline-item">
-									<a href="javascript:void(0);">
-										<img src="<?php echo DIR_MSS_IMG ?>github.svg" alt="">
-									</a>
-								</li>
-								<li class="list-inline-item">
-									<a href="javascript:void(0);">
-										<img src="<?php echo DIR_MSS_IMG ?>linkedin.svg" alt="">
-									</a>
-								</li>
+								<?php foreach(cs_get_options()['mss_social_items'] as $key => $value) : ?>
+                                    <li class="list-inline-item">
+                                        <a href="<?php echo $value['mss_social_items_url'] ?>" target="_blank">
+                                            <img src="<?php echo DIR_MSS_IMG . $value['mss_social_items_icon']; ?>.svg" alt="<?php echo $value['mss_social_items_title']; ?>">
+                                        </a>
+                                    </li>
+								<?php endforeach; ?>
 							</ul>
 						</div>
 					</div>
@@ -52,7 +39,7 @@
 							<div class="circle-3"></div>
 							<div class="floating"></div>
 							<div class="rounded-circle">
-								<img src="<?php echo DIR_MSS_IMG ?>personal-image-05.jpg" alt="/" class="rounded-circle img-fluid">
+								<img width="<?php echo cs_get_options()['mss_profile_image_width'] ?>%" src="<?php echo cs_get_options()['mss_profile_image']['url'] ?>" alt="<?php echo bloginfo('name')?>" class="rounded-circle img-fluid">
 							</div>
 						</div>
 					</div>
